@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+
+<body>
+
+  <!--Container section class-->
+
+    <section class="container">
+
+       <!--Content  section class-->
+
+      <section class="content">
+
+         <!--Header-->
+
+        <header>
+
+          <!--Header div-->
+
+            <div class="header">
+
+              <!--H1 element in header class-->
+
+                   <h1>To-Do List</h1>
+
+              <!--H1 element in header class-->
+
+            </div>
+
+             <!--Header div-->
+
+        </header>
+
+           <!--Header-->
+
+        <!--Aside-->
+
+        <aside>
+
+            <!--Title of aside class-->
+
+          <div class="title-of-aside">
+
+            <!--Title of aside-->
+
+            <h2>Workspace</h2>
+
+             <!--Title of aside-->
+
+          </div>
+
+          <!--Title of aside class-->
+
+          <!--Aside buttons class-->
+
+          <div class="aside-buttons">
+
+             <!--All-tasks-btn class-->
+
+            <div class="all-tasks-btn">
+
+              <!--All-tasks-img class-->
+
+            <div class="all-tasks-img">
+
+               <!--Image-->
+
+              <img src="/icons/icons8-task-50.png" alt="all-tasks-image">
+
+               <!--Image-->
+
+            </div>
+
+             <!--All-tasks-img class-->
+
+              <!--All-tasks-btn class-->
+
+              <!--All-tasks class and button-->
+
+            <button id="all-tasks">All Tasks</button>
+
+            <!--All-tasks class and button-->
+
+            </div>
+
+            <!--Done button class-->
+
+            <div class="done-btn">
+
+            <!--Done btn img class-->
+
+            <div class="done-btn-img">
+
+              <!--Done image-->
+
+              <img src="/icons/icons8-done-50.png" alt="done-btn-image">
+
+                 <!--Done image-->
+
+            </div>
+
+               <!--Done btn img class-->
+
+            <button id="done">Done</button>
+
+          </div>
+
+            <!--Done button class-->
+
+          </div>
+
+           <!--Aside buttons class-->
+
+           <!--Folders buttons-->
+
+          <div class="folders">
+
+            <!--Folders title-->
+
+            <div class="folders-title">
+
+            <h3>Folders</h3>
+
+            </div>
+
+             <!--Folders title-->
+
+             <!--Folders buttons class-->
+
+            <div class="folder-buttons">
+
+              <!--Work btn class and image-->
+
+              <div class="work-btn">
+
+                <div class="work-btn-img">
+
+                  <img src="/icons/icons8-work-50.png" alt="work-btn-image">
+
+                </div>
+
+                <button id="work">Work</button>
+
+                 <!--Work btn class and image-->
+
+              </div>
+
+              <!--Personal btn class and image-->
+
+              <div class="personal-btn">
+
+                <div class="personal-btn-img">
+
+                  <img src="/icons/icons8-name-tag-30.png" alt="personal-btn-image">
+
+                </div>
+
+                <button id="personal">Personal</button>
+
+              </div>
+
+                <!--Personal btn class and image-->
+
+                  <!--Study btn class and image-->
+
+              <div class="study-btn">
+
+                <div class="study-btn-img">
+
+                  <img src="/icons/icons8-study-48.png" alt="study-btn-image">
+
+                </div>
+
+                <button id="study">Study</button>
+
+              </div>
+
+                 <!--Study btn class and image-->
+
+            </div>
+
+             <!--Folders buttons class-->
+
+
+          </div>
+
+            <!--Folders buttons-->
+
+        </aside>
+
+         <!--Aside-->
+
+            <!--Main-->
+
+        <main>
+
+          <!--Dialog-->
+
+        <dialog id="todo-dialog">
+
+        <!--Form-->
+
+        <form id="todo-form">
+
+          <!--Task title-->
+
+            <label>Task Title</label>
+
+              <!--Task title-->
+
+                <!--Input-->
+
+            <input id="todo-title" type="text" placeholder="New task..." required />
+
+             <!--Input-->
+
+             <!--Priority-->
+
+            <label>Priority</label>
+
+             <!--Priority-->
+
+             <!--Select property-->
+
+            <select id="todo-priority" required>
+
+              <!--Options-->
+
+                <option value="low">Low</option>
+
+                <option value="medium">Medium</option>
+
+                <option value="high">High</option>
+
+               <!--Options-->
+
+            </select>
+
+              <!--Select property-->
+
+              <!--Description-->
+
+            <label>Description</label>
+
+                <!--Description-->
+
+              <!--Textarea-->
+
+            <textarea id="todo-description" placeholder="Short description..." required></textarea>
+
+              <!--Textarea-->
+
+              <!--Due Date label-->
+
+            <label>Due Date</label>
+
+             <!--Due Date label-->
+
+             <!--Input-->
+
+            <input id="todo-date" type="date"/>
+
+              <!--Input-->
+
+              <!--Folder label-->
+
+            <label>Folder</label>
+
+              <!--Folder label-->
+
+              <!--Select folder label-->
+
+            <select id="todo-folder" required>
+
+              <!--Options-->
+
+                <option value="Work">Work</option>
+
+                <option value="Personal">Personal</option>
+
+                <option value="Study">Study</option>
+
+              <!--Options-->
+
+            </select>
+
+              <!--Select folder label-->
+
+              <!--Buttons-->
+
+            <button id="add-btn" type="submit">Add</button>
+
+            <button id="close-dialog" type="button">Cancel</button>
+
+             <!--Buttons-->
+
+        </form>
+
+         <!--Form-->
+
+    </dialog>
+
+     <!--Dialog-->
+
+     <!--Content div and open dialog class button-->
+
+          <div id="content"></div>
+
+          <div id="task-bg">
+
+            <button id="open-dialog">+</button>
+
+          </div>
+
+         <!--Content div and open dialog class button-->
+
+        </main>
+
+         <!--Main-->
+
+         <!--Footer-->
+
+        <footer>
+
+            <h3>Odin Project To-Do List Zuko Development 2026</h3>
+
+        </footer>
+
+         <!--Footer-->
+
+      </section>
+
+       <!--Content section class-->
+
+    </section>
+
+     <!--Container section class-->
+
+</body>
+</html>

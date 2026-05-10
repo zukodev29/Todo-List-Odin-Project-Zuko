@@ -1,0 +1,516 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+html, body{
+    max-height: 100%;
+}  
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+/*CSS reset code*/
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+  font-family: 'Archivo_Black';
+  src: url(/fonts/Archivo_Black/ArchivoBlack-Regular.ttf);
+}
+/*Fonts that we have used in the exercise*/
+body{
+  min-width: 1440px;
+  width: 100%; /* Optional: ensures it stays responsive if needed */
+  font-family: 'Roboto';
+  min-height: 100vh;
+}
+/*Basic body code*/
+.content {
+  margin-left: 250px;
+}
+/*This for content to go left because of aside elements*/
+header h1{
+  background-color: rgb(233, 240, 247);
+  font-weight: 700;
+  height: 100px;
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Archivo_Black';
+  font-size: 3rem;
+}
+/*Code for header h1 element if you know basics of css you should probably understand it*/
+header h1:hover{
+  color: rgb(11, 82, 153);
+  transition: 0.5s;
+  cursor: pointer;
+}
+/*Code for hove effect of h1 element in header*/
+aside{
+  background-color: rgb(224, 224, 224);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 250px;
+}
+/*Code for aside bar which positions aside in fix position and other code for environment*/
+#task-bg button{
+   background-color: rgb(207, 0, 28);
+   border-radius: 50%;
+   width: 80px;
+   height: 80px;
+   font-weight: 900;
+   border: solid rgb(199, 4, 17) 2px;
+   position: relative;
+   left: 1200px;
+   top: 520px;
+}
+/*Code for + button element which you can access dom card*/
+#task-bg button:hover{
+  background-color: rgb(242, 44, 70);
+}
+/*+ button hover effect*/
+.title-of-aside{
+  text-align: center;
+  margin-top: 28px;
+  font-size: 1.8rem;
+}
+/*Code for the title of the aside*/
+.aside-buttons{
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 40px;
+  width: 150px;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-bottom: 70px;
+}
+/*Code for all aside buttons for an example work and etc. grid template ensures that every button will have
+it's own row*/
+.all-tasks-btn button{
+  background-color: rgb(224, 224, 224);
+  color: rgb(13, 245, 13);
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 4px;
+  padding-left: 5px;
+}
+/*All tasks button code*/
+.all-tasks-btn button:hover{
+  color: rgb(114, 243, 114);
+  transition: 0.5s;
+  cursor: pointer;
+}
+/*All tasks button hover effect code*/
+.done-btn button{
+  background-color: rgb(224, 224, 224);
+  color: rgb(5, 93, 245);
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 4px;
+  padding-left: 5px;
+}
+/*Done btn button code*/
+.done-btn button:hover{
+  color: rgb(77, 142, 255);
+  transition: 0.5s;
+  cursor: pointer;
+}
+/*Done btn button hover effect code*/
+.folders-title{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+/*Folders title code*/
+.folder-buttons{
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  margin-left: 50px;
+  gap: 40px;
+}
+/*Code for buttons like work personal etc. it ensures that they go in another row each button*/
+.work-btn button{
+  background-color: rgb(224, 224, 224);
+  color: rgb(250, 100, 0);
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 6px;
+  padding-left: 5px;
+}
+/*Work btn button code*/
+.work-btn button:hover{
+  color: rgb(255, 152, 84);
+  transition: 0.5s;
+  cursor: pointer;
+}
+/*Work btn button hover effect code*/
+.personal-btn button{
+  background-color: rgb(224, 224, 224);
+  color: rgb(255, 247, 8);
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 2px;
+}
+/*Personal btn button code*/
+.personal-btn button:hover{
+  color: rgb(255, 249, 71);
+  transition: 0.5s;
+  cursor: pointer;
+}
+/*Personal btn button hover effect code*/
+.study-btn button{
+  background-color: rgb(224, 224, 224);
+  color: rgb(245, 5, 5);
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 8px;
+  padding-left: 4px;
+}
+/*Study btn button code*/
+.study-btn button:hover{
+  color: rgb(247, 59, 59);
+  transition: 0.5s;
+  cursor: pointer;
+}
+/*Study btn button hover effect code*/
+footer h3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 620px;
+  background-color: bisque;
+  padding: 34px;
+}
+/*Code for footer and it positions it at the end of page*/
+footer h3:hover{
+  color: rgb(235, 123, 23);
+  font-weight: 900;
+  transition: 0.5s;
+  cursor: pointer;
+}
+/*Code for footer hover effect code*/
+.all-tasks-img{
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+/*Code for all tasks img, which positions image on the left side 
+of the button, and it's pretty much same code till the card dom comment*/
+.done-btn-img{
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+.work-btn-img{
+  float: left;
+  height: 36px;
+  width: 36px;
+}
+.personal-btn-img{
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+.study-btn-img{
+  float: left;
+  height: 43px;
+  width: 43px;
+}
+/*card dom*/
+.work {
+    color: #38bdf8;
+    fill: #38bdf8;
+}
+/*Code for work image and text in dom */
+.personal {
+    color: #e29898;
+    fill: #e29898;
+}
+/*Code for study image and text in dom */
+.study {
+    color: #22c55e;
+    fill: #22c55e;
+}
+/*Code for study image and text in dom */
+
+/*Code for dom card*/
+.card {
+    min-width: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr 0;
+    gap: 5px;
+    border: 1px solid #f5efe6;
+    transition: 0.2s;
+    margin: 40px;
+}
+/*Code for dom card hover effect*/
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+/*Code for dom card header*/
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*This selector targets specific paragraph elements within elements that have the .card class. 
+The :nth-child(3n + 3) pseudo-class is a mathematical formula that selects every third paragraph starting from the third child*/
+.card p:nth-child(3n + 3) {
+    color: #6b7280;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+/*Code for card header element h3*/
+.card-header h3 {
+    color: #1f2937;
+    margin: 0;
+}
+/*Code for edit and delete button in div actions in dom.js*/
+.actions {
+    display: flex;
+    gap: 10px;
+}
+/*Code for those two buttons*/
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+/*Code for those two buttons hover effect it's makes element higher when whe go over it with transform scale
+and opacity is 1*/
+.actions button:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+/*Code for: work, personal & study icons*/
+.icon {
+    width: 20px;
+    height: 20px;
+}
+/*Code for .date-container div*/
+.date-container {
+    border-top: 2px solid #e5e7eb;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    color: #64748b;
+    font-size: 14px;
+    transform: translateY(4px);
+    margin-top: 40px;
+}
+/*Code for complete button*/
+.completed {
+    opacity: 0.5;
+}
+.complete-btn{
+  margin-top: 10px;
+}
+.complete-btn:hover {
+    cursor: pointer;
+    background-color: #c3d2da;
+}
+/*Code for complete button*/
+.priority-high {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+/*Code for priority level-high*/
+.priority-medium {
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+/*Code for priority level-medium*/
+.priority-low {
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+/*Code for priority level-low*/
+.folder-icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(3px);
+    padding-right: 5px;
+}
+/*Code for folder icon-icons that wil be displayed in task card-three main icons*/
+.folder-Work {
+    filter: invert(57%) sepia(88%) saturate(400%) hue-rotate(170deg);
+}
+/*Folder icons code with filter property*/
+.folder-Personal {
+    filter: invert(64%) sepia(45%) saturate(600%) hue-rotate(310deg);
+}
+/*Folder icons code with filter property*/
+.folder-Study {
+    filter: invert(52%) sepia(80%) saturate(400%) hue-rotate(90deg);
+}
+/*Folder icons code with filter property*/
+#open-dialog {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #e29898;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+/*Code for button +*/
+#open-dialog:hover {
+    background-color: #e4a0a0;
+    transform: translateY(-10px);
+    transform: scale(1.05);
+}
+/*Code for button +-hover effect*/
+dialog {
+    border: none;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Code for dialog in html*/
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+/*::backdrop styles background and other elements for dialog properties*/
+form {
+    color: #2E2E2E;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 460px;
+    border-radius: 20px;
+    border: 1px solid #FBCFE8;
+    padding: 20px;
+    gap: 8px;
+    
+}
+/*Code for form in dialog*/
+input,
+select,
+textarea {
+    color: #6B7280;
+    border-radius: 15px;
+    padding: 5px;
+    border: 1px solid #64748b;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #FBCFE8;
+    height: 200px;
+}
+/*Code for dialog html*/
+label {
+    color: #6B7280;
+    font-size: 16px;
+    
+}
+/*Code for dialog html*/
+form button {
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+}
+/*Code for form button*/
+#add-btn {
+    border: 1px solid #34D399;
+    background-color: #c8f5dd;
+    margin-top: 20px;
+}
+/*Code for add button*/
+#add-btn:hover {
+    background-color: #059669;
+}
+/*Code for add button hover effect*/
+#close-dialog {
+    border: 1px solid #FDE68A;
+}
+/*Code for close button in dialog html*/
+#todo-description{
+  min-height: 100px;
+  max-height: 200px;
+}
+/*With min and max height I can change textarea height*/
